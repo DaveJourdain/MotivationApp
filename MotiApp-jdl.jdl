@@ -1,0 +1,22 @@
+
+application {
+  config {
+    baseName MotivationApp
+    applicationType monolith
+    packageName rocks.zipcode.motivationapp
+    authenticationType jwt
+    prodDatabaseType mysql
+    clientFramework react
+  }
+  entities *
+}
+
+entity Quote {
+	author String
+    auote String
+}
+
+relationship ManyToMany {
+  Quote{login} to User{favorite}
+}
+
